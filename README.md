@@ -2,6 +2,10 @@
 
 *“English Grammar for Russian-Speakers”—A Working App for You to Build with Phonegap & Electron*
 
+[![Travis](https://img.shields.io/travis/englishextra/englishextra-app.svg)](https://github.com/englishextra/englishextra-app)
+
+[![SourceForge](https://img.shields.io/sourceforge/dm/englishextra-app.svg)](https://sourceforge.net/projects/englishextra-app/)
+
 ## Dashboard
 
 <https://build.phonegap.com/apps/1824701/builds>
