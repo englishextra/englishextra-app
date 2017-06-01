@@ -4,7 +4,7 @@
   "companyName": "englishextra.github.io",
   "version": "1.0.0",
   "identifier": "com.englishextra.app",
-  "description": "English Grammar for Russian-Speakers",
+  "description": "English Grammar for Russian-Speakers—an App for Windows / Android / Linux",
   "repository": {
     "type": "git",
     "url": "https://github.com/englishextra/englishextra-app.git"
@@ -12,9 +12,9 @@
   "email": "englishextra@mail.ru",
   "url": "https://github.com/englishextra/englishextra-app/issues",
   "main_file": "index.js",
-  "electronVersion": "1.4.15",
+  "electronVersion": "1.6.10",
   "dependencies": {
-    "electron": "^1.4.15",
+    "electron": "^1.6.10",
     "electron-packager": "^8.5.1"
   },
   "devDependencies": {
