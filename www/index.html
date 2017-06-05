@@ -12,10 +12,9 @@
 			body{overflow-y:scroll;color:transparent;background-color:#F0F0F0;}a,ul,li,.panel-nav-menu li a,.holder-panel-menu-more{color:inherit;}ul{list-style-type:none;}.panel-nav-menu,.panel-nav-top{background-color:transparent;}.panel-nav-menu,.holder-panel-menu-more,.panel-nav-top,.btn-nav-menu,.btn-menu-more,.btn-show-vk-like,.share-buttons,.holder-search-form,.holder-contents-select,.location-qr-code,.contacts-qr-code,.cd-prev,.cd-next,.pswp,.superbox,.github-fork-ribbon a,template{display:none;}.ya-site-form.ya-site-form_inited_no{visibility:hidden;}.container{opacity:0;}
 		</style><noscript><link rel="stylesheet" href="./libs/englishextra-app/css/bundle.min.css" /><style>.container{opacity:1;}</style></noscript>
 		<script>
-			var imagesPreloaded=!1;(function(m){m="[object Array]"===Object.prototype.toString.apply(m)?m:[m];var t=function(){imagesPreloaded=!0;},f=function(){imagesPreloaded=!1;},c=[];for(var i=0,l=m.length;i<l;i++){c[i]=new Image();c[i].onabort=f;c[i].onerror=f;c[i].onload=t;c[i].src=m[i];}})(["./libs/englishextra-app/img/sprite.png"]);
+			var imagesPreloaded=false;(function(m){m="[object Array]"===Object.prototype.toString.apply(m)?m:[m];var t=function(){return imagesPreloaded=true;},f=function(){return imagesPreloaded=false;},c=[];for(var i=0,l=m.length;i<l;i++){c[i]=new Image();c[i].onabort=f;c[i].onerror=f;c[i].onload=t;c[i].src=m[i];}})(["./libs/englishextra-app/img/sprite.png"]);
 		</script>
 		<script charset="utf-8" src="./cordova.js"></script>
-		<!-- <script src="http://localhost:1337/vorlon.js/ab38dklf"></script> -->
 	</head>
 	<body>
 		<div class="page" id="page" role="document">
@@ -43,10 +42,10 @@
 			</div>
 			<a href="javascript:void(0);" class="btn-menu-more" title="Еще"></a>
 			<div class="holder-search-form">
-				<form action="javascript:void(0);" class="search-form" onsubmit="return!1" method="get" enctype="application/x-www-form-urlencoded">
+				<form action="javascript:void(0);" id="search-form" class="search-form" onsubmit="return!1" method="get" enctype="application/x-www-form-urlencoded">
 					<div class="form-group">
 						<p>
-							<span class="holder-search-text"><input type="text" name="text" id="text" autocomplete="off" placeholder="Поиск" /></span>
+							<span class="holder-search-text"><input type="text" name="text" id="text" autocomplete="off" placeholder="Поиск" aria-labelledby="search-form" /></span>
 						</p>
 					</div>
 				</form>
