@@ -1,9 +1,8 @@
 {
-  "name": "englishextra-app",
-  "productName": "englishextra-app",
+  "name": "englishextra",
+  "productName": "englishextra",
   "companyName": "englishextra.github.io",
   "version": "1.0.0",
-  "identifier": "com.englishextra.app",
   "description": "English Grammar for Russian-Speakers—an App for Windows / Android / Linux",
   "repository": {
     "type": "git",
