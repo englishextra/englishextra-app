@@ -2,6 +2,7 @@
 
 *English Grammar for Russian-Speakers—an App for Windows / Android / Linux*
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c948a05225f4a589590ade4a1aee11f)](https://www.codacy.com/app/englishextra/englishextra-app?utm_source=github.com&utm_medium=referral&utm_content=englishextra/englishextra-app&utm_campaign=badger)
 [![Travis](https://img.shields.io/travis/englishextra/englishextra-app.svg)](https://github.com/englishextra/englishextra-app)
 [![SourceForge](https://img.shields.io/sourceforge/dm/englishextra-app.svg)](https://sourceforge.net/projects/englishextra-app/)
 
