@@ -1,10 +1,13 @@
 /*jslint node: true */
-/*jslint es6 */
+/*jslint esversion: 6 */
 module.exports = function (grunt) {
 	"use strict";
 	grunt.initConfig({
 		jshint: {
-			all: ["www/libs/englishextra-app/js/bundle.js"]
+			all: [
+				"**/libs/**/js/bundle.js",
+				"**/libs/**/js/vendors.js"
+			]
 		}
 	});
 	grunt.loadNpmTasks("grunt-contrib-jshint");
