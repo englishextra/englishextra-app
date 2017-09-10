@@ -7,7 +7,8 @@ version = "1.0.0">
 	<name>englishextra</name>
 	<description>English Grammar for Russian-Speakers</description>
 	<author href="https://englishextra.github.io/" email="englishextra@mail.ru">englishextra.github.io</author>
-	<preference name="phonegap-version" value="cli-6.5.0" />
+	<preference name='phonegap-version' value='cli-7.0.1' />
+	<preference name='pgb-builder-version' value='1' />
 	<!--
 	If you do not want any permissions to be added to your app, add the
 	following tag to your config.xml; you will still have the INTERNET
@@ -136,6 +137,6 @@ version = "1.0.0">
 	<allow-intent href="itms:*" />
 	<allow-intent href="itms-apps:*" />
 	</platform> -->
-	<!-- <access origin="*" /> -->
-	<access origin="*" browserOnly="true" />
+	<access origin="*" />
+	<!-- <access origin="*" browserOnly="true" /> -->
 </widget>
