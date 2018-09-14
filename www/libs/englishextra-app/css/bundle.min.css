@@ -54,6 +54,7 @@ EB5262
 	src: url(../../../fonts/englishextra-ui-icons-fontfacekit/englishextra-ui-icons.woff2) format("woff2"), url(../../../fonts/englishextra-ui-icons-fontfacekit/englishextra-ui-icons.woff) format("woff"), url(../../../fonts/englishextra-ui-icons-fontfacekit/englishextra-ui-icons.ttf) format("truetype");
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -62,6 +63,7 @@ EB5262
 	font-weight: 300;
 	font-style: normal;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -70,6 +72,7 @@ EB5262
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -78,6 +81,7 @@ EB5262
 	font-weight: 400;
 	font-style: italic;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -86,6 +90,7 @@ EB5262
 	font-weight: 700;
 	font-style: normal;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -94,6 +99,7 @@ EB5262
 	font-weight: 700;
 	font-style: italic;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -102,6 +108,7 @@ EB5262
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
