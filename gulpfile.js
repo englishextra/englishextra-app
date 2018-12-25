@@ -11,6 +11,8 @@
  * @see {@link https://codeburst.io/switching-to-gulp-4-0-271ae63530c0}
  */
 
+var currentLibName = "englishextra-app";
+
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sass = require("gulp-sass");
@@ -199,10 +201,10 @@ var csslintOptions = {
 
 var options = {
 	libbundle: {
-		src: "./www/libs/**/src/*.js",
-		js: "./www/libs/**/js",
-		scss: "./www/libs/**/scss/*.scss",
-		css: "./www/libs/**/css"
+		src: "./www/libs/" + currentLibName + "/src/*.js",
+		js: "./www/libs/" + currentLibName + "/js",
+		scss: "./www/libs/" + currentLibName + "/scss/*.scss",
+		css: "./www/libs/" + currentLibName + "/css"
 	},
 };
 
@@ -269,11 +271,11 @@ gulp.task("browser-sync", gulp.series(gulp.parallel(
 			server: "./www/"
 		});
 
-		gulp.watch("./www/*.html").on("change", reload);
-		gulp.watch("./www/libs/**/css/*.css").on("change", reload);
-		gulp.watch("./www/libs/**/scss/*.scss", gulp.parallel("compile-css")).on("change", reload);
-		gulp.watch("./www/libs/**/js/*.js").on("change", reload);
-		gulp.watch("./www/libs/**/src/*.js", gulp.parallel("compile-js")).on("change", reload);
+		gulp.watch("./www/**/*.html").on("change", reload);
+		gulp.watch("./www/libs/" + currentLibName + "/css/*.css").on("change", reload);
+		gulp.watch("./www/libs/" + currentLibName + "/scss/*.scss", gulp.parallel("compile-css")).on("change", reload);
+		gulp.watch("./www/libs/" + currentLibName + "/js/*.js").on("change", reload);
+		gulp.watch("./www/libs/" + currentLibName + "/src/*.js", gulp.parallel("compile-js")).on("change", reload);
 	}));
 
 gulp.task("default", gulp.task("browser-sync"));
