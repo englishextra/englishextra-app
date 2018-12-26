@@ -13,12 +13,12 @@
 	"main_file": "index.js",
 	"electronVersion": "1.6.11",
 	"dependencies": {
-		"npm": "^4.0.5"
+		"npm": "^6.5.0"
 	},
 	"devDependencies": {
-		"electron": "^1.6.11",
-		"electron-debug": "^1.1.0",
-		"electron-packager": "^8.7.1",
+		"electron": "^4.0.0",
+		"electron-debug": "^2.0.0",
+		"electron-packager": "^13.0.1",
 		"@babel/core": "^7.2.2",
 		"@babel/plugin-transform-arrow-functions": "^7.2.0",
 		"@babel/plugin-transform-async-to-generator": "^7.2.0",
