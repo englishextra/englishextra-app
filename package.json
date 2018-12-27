@@ -16,8 +16,6 @@
 		"npm": "^6.5.0"
 	},
 	"devDependencies": {
-		"electron": "^4.0.0",
-		"electron-debug": "^2.0.0",
 		"electron-packager": "^13.0.1",
 		"@babel/core": "^7.2.2",
 		"@babel/plugin-transform-arrow-functions": "^7.2.0",
