@@ -5,16 +5,14 @@
 	"keywords": ["spa",
 	"pwa",
 	"webapp"],
+	"main_file": "index.js",
+	"electronVersion": "4.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/englishextra/englishextra-app.git"
 	},
-	"productName": "englishextra",
-	"companyName": "englishextra.github.io",
-	"main_file": "index.js",
-	"electronVersion": "4.0.0",
 	"dependencies": {
-		"npm": "^6.5.0"
+		"npm": "^6.6.0"
 	},
 	"devDependencies": {
 		"electron-packager": "^13.0.1",
@@ -63,7 +61,7 @@
 		"plugin": true
 	},
 	"email": "englishextra@mail.ru",
-	"url": "https://github.com/englishextra/englishextra-app/issues",
+	"url": "https://github.com/englishextra/qrjs/issues",
 	"maintainers": {
 		"name": "Serguei Shimansky",
 		"email": "englishextra@mail.ru",
