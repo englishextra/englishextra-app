@@ -5,8 +5,10 @@
 	"keywords": ["spa",
 	"pwa",
 	"webapp"],
-	"main_file": "index.js",
-	"electronVersion": "4.0.0",
+	"main": "main.js",
+	"window": {
+		"icon": "www/icon.png"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/englishextra/englishextra-app.git"
@@ -40,25 +42,6 @@
 	"scripts": {
 		"test": "gulp lint-libbundle-js",
 		"start": "electron ./index.js"
-	},
-	"xo": {
-		"esnext": true,
-		"envs": ["node",
-		"browser"]
-	},
-	"main": "www/index.html",
-	"window": {
-		"title": "Английский без регистрации",
-		"icon": "www/favicon-32x32.png",
-		"toolbar": true,
-		"frame": true,
-		"width": 844,
-		"height": 640,
-		"min_width": 800,
-		"min_height": 600
-	},
-	"webkit": {
-		"plugin": true
 	},
 	"email": "englishextra@mail.ru",
 	"url": "https://github.com/englishextra/qrjs/issues",
