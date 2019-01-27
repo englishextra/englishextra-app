@@ -10,7 +10,6 @@
  * @see {@link https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/}
  * @see {@link https://codeburst.io/switching-to-gulp-4-0-271ae63530c0}
  */
-
 var currentLibName = "englishextra-app";
 
 var gulp = require("gulp");
@@ -27,6 +26,9 @@ var cleanCssOptions = {
 var uglify = require("gulp-uglify");
 var sourcemaps = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
+var replace = require("gulp-replace");
+var concat = require("gulp-concat");
+/* var bundle = require("gulp-bundle-assets"); */
 
 var browserSync = require("browser-sync").create();
 var reload = browserSync.reload;
@@ -204,11 +206,26 @@ var csslintOptions = {
 
 var options = {
 	libbundle: {
-		src: "./www/libs/" + currentLibName + "/src/*.js",
-		js: "./www/libs/" + currentLibName + "/js",
-		scss: "./www/libs/" + currentLibName + "/scss/*.scss",
-		css: "./www/libs/" + currentLibName + "/css"
+		src: "./src/*.js",
+		js: "./js",
+		scss: "./scss/*.scss",
+		css: "./css"
 	},
+	vendors: {
+		src: [
+			"../../cdn/verge/1.9.1/js/verge.fixed.js",
+			"../../cdn/kamil/0.1.1/js/kamil.fixed.js",
+			"../../cdn/packery/2.1.1/js/packery.pkgd.fixed.js",
+			"../../cdn/routie/0.3.2/js/routie.fixed.js"
+		],
+		js: "./js",
+		concatOptions: {
+			js: {
+				path: "vendors.js",
+				newLine: "\n"
+			}
+		}
+	}
 };
 
 gulp.task("compile-libbundle-css", function () {
@@ -263,22 +280,50 @@ gulp.task("lint-libbundle-js", function () {
 	.pipe(eslint.failAfterError());
 });
 
+gulp.task("compile-vendors-js", function () {
+	return gulp.src(options.vendors.src)
+	.pipe(plumber())
+	.pipe(sourcemaps.init())
+	.pipe(babel(babelOptions))
+	.pipe(prettier(prettierOptions))
+	/* .pipe(beautify(beautifyOptions)) */
+	.pipe(concat(options.vendors.concatOptions.js))
+	.pipe(gulp.dest(options.vendors.js))
+	.pipe(rename(function (path) {
+			path.basename += ".min";
+		}))
+	.pipe(stripDebug())
+	.pipe(uglify())
+	.pipe(sourcemaps.write("."))
+	.pipe(gulp.dest(options.vendors.js))
+	.pipe(plumber.stop());
+});
+
+gulp.task("lint-vendors-js", function () {
+	return gulp.src(options.vendors.src)
+	.pipe(eslint())
+	.pipe(eslint.format())
+	.pipe(eslint.failAfterError());
+});
+
 /*!
  * @see {@link https://browsersync.io/docs/gulp}
  */
 gulp.task("browser-sync", gulp.series(gulp.parallel(
 			"lint-libbundle-js",
-			"lint-libbundle-css"), function watchChanges() {
+			"lint-libbundle-css",
+			"lint-vendors-js"), function watchChanges() {
 
 		browserSync.init({
-			server: "./www/"
+			server: "../../"
 		});
 
-		gulp.watch("./www/**/*.html").on("change", reload);
-		gulp.watch("./www/libs/" + currentLibName + "/css/*.css").on("change", reload);
-		gulp.watch("./www/libs/" + currentLibName + "/scss/*.scss", gulp.parallel("compile-libbundle-css")).on("change", reload);
-		gulp.watch("./www/libs/" + currentLibName + "/js/*.js").on("change", reload);
-		gulp.watch("./www/libs/" + currentLibName + "/src/*.js", gulp.parallel("compile-libbundle-js")).on("change", reload);
+		gulp.watch("../../**/*.html").on("change", reload);
+		gulp.watch("../../libs/" + currentLibName + "/css/*.css").on("change", reload);
+		gulp.watch("../../libs/" + currentLibName + "/scss/*.scss", gulp.parallel("compile-libbundle-css")).on("change", reload);
+		gulp.watch("../../libs/" + currentLibName + "/js/*.js").on("change", reload);
+		gulp.watch("../../libs/" + currentLibName + "/src/*.js", gulp.parallel("compile-libbundle-js")).on("change", reload);
+		gulp.watch("../../libs/" + currentLibName + "/json/*.json").on("change", reload);
 	}));
 
 gulp.task("default", gulp.task("browser-sync"));
