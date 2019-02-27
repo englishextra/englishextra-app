@@ -213,7 +213,7 @@ var options = {
 	},
 	vendors: {
 		src: [
-			"../../cdn/verge/1.9.1/js/verge.fixed.js",
+			"../../cdn/lazyload/10.19.0/js/lazyload.iife.fixed.js",
 			"../../cdn/kamil/0.1.1/js/kamil.fixed.js",
 			"../../cdn/packery/2.1.1/js/packery.pkgd.fixed.js",
 			"../../cdn/routie/0.3.2/js/routie.fixed.js"
