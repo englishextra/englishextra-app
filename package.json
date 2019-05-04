@@ -2,9 +2,11 @@
 	"name": "englishextra",
 	"version": "1.0.0",
 	"description": "English Grammar for Russian-Speakers—an App for Windows / Android / Linux",
-	"keywords": ["spa",
-	"pwa",
-	"webapp"],
+	"keywords": [
+		"spa",
+		"pwa",
+		"webapp"
+	],
 	"main": "main.js",
 	"window": {
 		"icon": "www/icon.png"
@@ -14,16 +16,16 @@
 		"url": "https://github.com/englishextra/englishextra-app.git"
 	},
 	"dependencies": {
-		"npm": "^6.7.0"
+		"npm": "^6.9.0"
 	},
 	"devDependencies": {
-		"electron-packager": "^13.0.1",
 		"@babel/core": "^7.2.2",
 		"@babel/plugin-transform-arrow-functions": "^7.2.0",
 		"@babel/plugin-transform-async-to-generator": "^7.2.0",
 		"@babel/plugin-transform-object-assign": "^7.2.0",
 		"@babel/preset-env": "^7.2.0",
-		"browser-sync": "^2.26.3",
+		"browser-sync": "^2.26.5",
+		"electron-packager": "^13.0.1",
 		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "^6.0.0",
 		"gulp-babel": "^8.0.0",
