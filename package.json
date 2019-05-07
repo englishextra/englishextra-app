@@ -2,9 +2,11 @@
 	"name": "englishextra",
 	"version": "1.0.0",
 	"description": "English Grammar for Russian-Speakers—an App for Windows / Android / Linux",
-	"keywords": ["spa",
-	"pwa",
-	"webapp"],
+	"keywords": [
+		"spa",
+		"pwa",
+		"webapp"
+	],
 	"main": "main.js",
 	"window": {
 		"icon": "www/icon.png"
@@ -14,7 +16,7 @@
 		"url": "https://github.com/englishextra/englishextra-app.git"
 	},
 	"dependencies": {
-		"npm": "^6.7.0"
+		"npm": "^6.9.0"
 	},
 	"devDependencies": {
 		"electron-packager": "^13.0.1",
