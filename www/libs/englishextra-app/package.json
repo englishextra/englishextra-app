@@ -9,7 +9,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/englishextra/shimansky.biz.git"
+		"url": "git+https://github.com/englishextra/englishextra-app.git"
 	},
 	"dependencies": {
 		"npm": "^6.10.1"
@@ -42,7 +42,7 @@
 		"test": "gulp lint-libbundle-js"
 	},
 	"email": "englishextra@mail.ru",
-	"url": "https://github.com/englishextra/shimansky.biz/issues",
+	"url": "https://github.com/englishextra/englishextra-app/issues",
 	"maintainers": {
 		"name": "Serguei Shimansky",
 		"email": "englishextra@mail.ru",

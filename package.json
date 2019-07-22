@@ -1,5 +1,5 @@
 {
-	"name": "englishextra",
+	"name": "englishextra-app",
 	"version": "1.0.0",
 	"description": "English Grammar for Russian-Speakers—an App for Windows / Android / Linux",
 	"keywords": [
@@ -46,7 +46,7 @@
 		"start": "electron ./index.js"
 	},
 	"email": "englishextra@mail.ru",
-	"url": "https://github.com/englishextra/qrjs/issues",
+	"url": "https://github.com/englishextra/englishextra-app/issues",
 	"maintainers": {
 		"name": "Serguei Shimansky",
 		"email": "englishextra@mail.ru",
