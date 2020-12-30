@@ -1,0 +1,63 @@
+{
+	"name": "englishextra-app",
+	"version": "1.0.0",
+	"description": "English Grammar for Russian-Speakers (a mobile app)",
+	"keywords": [
+		"spa",
+		"pwa",
+		"webapp"
+	],
+	"main": "main.js",
+	"window": {
+		"icon": "www/icon.png"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/englishextra/englishextra-app.git"
+	},
+	"dependencies": {
+		"npm": "^6.14.8"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/plugin-transform-arrow-functions": "^7.2.0",
+		"@babel/plugin-transform-async-to-generator": "^7.2.0",
+		"@babel/plugin-transform-object-assign": "^7.2.0",
+		"@babel/preset-env": "^7.2.0",
+		"browser-sync": "^2.26.12",
+		"electron-packager": "^13.0.1",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.0.0",
+		"gulp-cli": "^2.0.1",
+		"gulp-eslint": "^5.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-prettier": "^2.0.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sass-lint": "^1.4.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-strip-debug": "^3.0.0",
+		"gulp-uglify": "^3.0.1"
+	},
+	"scripts": {
+		"test": "gulp lint-libbundle-js",
+		"start": "electron ./index.js"
+	},
+	"email": "englishextra@mail.ru",
+	"url": "https://github.com/englishextra/englishextra-app/issues",
+	"maintainers": [
+		{
+			"name": "Serguei Shimansky",
+			"email": "englishextra@mail.ru",
+			"url": "https://github.com/englishextra"
+		}
+	],
+	"author": {
+		"name": "englishextra",
+		"email": "englishextra@mail.ru",
+		"url": "https://github.com/englishextra"
+	},
+	"license": "(MIT)"
+}
