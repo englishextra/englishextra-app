@@ -24,7 +24,7 @@
 		"@babel/plugin-transform-async-to-generator": "^7.12.1",
 		"@babel/plugin-transform-object-assign": "^7.12.1",
 		"@babel/preset-env": "^7.12.11",
-		"browser-sync": "^2.26.13",
+		"browser-sync": "^3.0.3",
 		"electron": "^27.0.0",
 		"electron-packager": "^17.1.2",
 		"gulp": "^4.0.2",
